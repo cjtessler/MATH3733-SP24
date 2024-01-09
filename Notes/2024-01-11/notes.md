@@ -214,7 +214,7 @@ Notice that variable names can be more than single letters.
 "# This is not a comment because it's inside quotes." 
 # It is a string
 
-m = "Hello variables"
+msg = "Hello variables"
 print(msg)
 
 # variables should be descriptive
@@ -242,7 +242,7 @@ print(first_name, last_name)
 
 # print function with sep argument
 print("Today's date is")
-print(1, 22, 2018, sep='/')
+print(1, 11, 2024, sep='/')
 print() # adds an extra line
 
 # f-strings are convenient for string interpolation
@@ -253,6 +253,7 @@ print(f"My name is {first_name} and my last name is {last_name}")
 The `print()` function can take more than one argument.  It concatenates the strings. [2. Built-in Functions — Python 3.10 documentation](https://docs.python.org/3.10/library/functions.html#print)
 
 ## Rules for variables
+
 No spaces. Use underscore in place of a space
 
 - ❌ `my var` is not valid
@@ -283,7 +284,6 @@ Python is case sensitive, so two variables with the same name but different case
 
 ⚠️ Do **not** create a variable named `print` because that would conflict with the pre-defined `print` function. More on **namespace** later.
 
-
 ## Exercise 2: Area of a Circle
 
 Write a program to compute the radius of a circle. There will be three variables `pi`, `radius`, and `area`. Choose an appropriate value for `pi`, a value of your coice for `radius`, and then `area` should be computed appropriately. Print the area.
@@ -299,22 +299,22 @@ print(area)
 
 **Exercise 1: More on `print()`**
 
-
 Run the following commands and observe the output.
 
 ``` python
 print('Single Quotes')
 ```
+
 ``` python
 print("Double Quotes")
 ```
 
 ``` python
 print('''Triples Quotes are extra
-		helpful because they allow a string
-		to span multiple lines. Don't forget
-		to try this with 'single quotes' and
-		"double" quotes.''')
+    helpful because they allow a string
+    to span multiple lines. Don't forget
+    to try this with 'single quotes' and
+    "double" quotes.''')
 ```
 
 ``` python
@@ -324,9 +324,13 @@ print("Why can't I use single quotes here?")
 
 Now write a program that generates the following output:
 
-```
+``` text
 Hello, I'm happy you decided to run this "Python" program!
 ```
 
+**Exercise 2: Primes** An integer $p$ is prime if $1$ and $p$ are its only divisors. Show that $149$ is a prime number. Use the fact that $p$ is prime if $p$ `%` $n \neq 0$ for all $n \leq \sqrt{p}$.
 
-**Exercise 2: Primes** An integer $p$ is prime if $1$ and $p$ are its only divisors. Find all the primes between $100$ and $1150$. Use the fact that $p$ is prime if $p$ `%` $n \neq 0$ for all $n \leq \sqrt{p}$.
+**Exercise 3: Fermat's Theorem on the sum of two squares** Fermat's Two Squares Theorem states every prime number $p$ of the form $4k+1$ can be epressed as the some of two squares. For example $5 = 2^2 + 1^1$. 
+
+Show that $149$ is of the form $4k+1$ and find numbers $a$ and $b$ such that $a^2 + b^2 = 149$.
+
