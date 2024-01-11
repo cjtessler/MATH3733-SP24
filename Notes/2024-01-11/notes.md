@@ -80,6 +80,7 @@ Arithmetic operators follow the standard order of operation.
 2
 >>> 7 % 3
 1
+>>> quit() # quits the interactive terminal
 ```
 
 ## Types
