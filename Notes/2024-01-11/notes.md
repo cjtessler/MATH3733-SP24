@@ -22,9 +22,6 @@
 - Install Python extension
 - Adjust font size
 
-## Review Syllabus
-
-- It is fine to use ChatGPT or other generative AI tools on the programming exercises. In fact, I encourage you to use it to evaluate your solution and generate similar exercises.
 
 ## What is a "computer"?
 
@@ -48,35 +45,6 @@
 **Computation** is any type of calculation that includes both arithmetical and non-arithmetical steps and which follows a well-defined model (e.g. an **algorithm**).
 
 A **program** is a sequence of instructions that specify how to perform a computation.
-
-## Guessing Game
-
-``` text
-I am thinking of a number! Try to guess it.
-> 10
-Too low! Guess again.
-> 100
-Too high! Guess again.
-> -100
-Too low! Guess again
-> 95
-That's it! Would you like to play again? (yes/no)
-```
-
-Main Ideas
-
-- *variables* to store numbers
-- Control flow
-  - *conditionals* or *branching* to test guess
-  - repetition (*looping*)
-- input/output
-- Data Types
-  - numbers (*int*s, *float*s, etc)
-  - words (*strings*)
-- *functions* encapsulate repeated behavior
-- `random` module
-
-We will eventually build this, take care of errors, and improve game play.
 
 ## REPL
 
@@ -114,6 +82,23 @@ Arithmetic operators follow the standard order of operation.
 1
 ```
 
+## Types
+
+We can use the `type` function to determine the data type of its input.
+
+```python
+>>> type(3)
+<class 'int'>
+>>> type(3.0)
+<class 'float'>
+>>> type(8 / 3)
+<class 'float'>
+>>> type(8 // 3)
+<class 'int'>
+>>> type("hello")
+<class 'str'>
+```
+
 ## Comments
 
 We can write **comments** in our programs. Our programs will eventually get to be very, very long. Commenting is a way for you to leave "notes" for yourself or other programmers so that you (and/or others) understand what your thinking process was when you originally wrote your program.
@@ -138,68 +123,18 @@ print(2 * 60 + 42) # this will print 162
 
 # Exercise 1
 # How many seconds are there in 2 hours, 42 minutes, 42 seconds?
-print()
+print(2 * 60 * 60 + 42 * 60 + 32) 
 
 # Exercise 2
 # Write an expression that simplifies to 42.0 and 
 # uses the exponentiation, addition, subtraction, 
 # multiplication, and division operators.
-print()     
+print(((((100 / 10) - 10) + 42) ** 0) * 42 )     
 ```
-
-## Debugging
-
-Demonstrate `print(“hello world”)` in interactive mode.
-
-``` python
->>> print(“hello world!”)
-hello world
-```
-
-- `print(arguments)`  is a function
-- We *call* a function and it performs actions
-- “Hello world” is a string (data type)
-- Let’s break the program. Below are a few examples.
-
-``` python
->>> print("Hello World"
-... )
-# It is expecting the closing parentheses 
-
->>> print("Hello World)
-# SyntaxError: EOL while scanning string literal
-# EOL mean "End of line"
-# The Python interpreter was looking for the end of string, the closing "
-
->>> prin("Hello world")
-# NameError: name 'prin' is not defined
-# "prin" is not a defined function
-# We will learn how to define our own functions in the future
-        
->>> print(hello world)
-# SyntaxError: invalid syntax
-
->>>   print("Hello World!")
-# IndentationError: unexpected indent
-# Python use whitespace to determine "blocks" of code
-# More on this later
-```
-
-- An error in a program is known as a “bug”.
-- [The First Computer Bug Ever Found! | Technology Facts - Glitch Facts - YouTube](https://www.youtube.com/watch?v=84VmwdGwYMA)
-- The process of fixing fixing bugs is known as **debugging**.
-- Read the error messages!
-
-## hello_variables.py
 
 A small program is sometimes referred to as a *script*.
 
-```python
-print("Hello World"
-# SyntaxError: unexpected EOF while parsing
-# EOF means "End of file"
-# The Python interpreter was expecting the closing )
-```
+## variables.py
 
 A **variable** is a name that refers to an object.
 
@@ -230,23 +165,9 @@ our_number = my_number + your_number
 print(our_number)
 
 # print function with multiple arguments
-first_name = "Cody"
-last_name = "Tessler"
+first_name = "John"
+last_name = "Smith"
 print(first_name, last_name)
-
-# variables can be reassigned
-first_name = "Hayley"
-print("first_name has been changed")
-print(first_name, last_name)
-
-# print function with sep argument
-print("Today's date is")
-print(1, 11, 2024, sep='/')
-print() # adds an extra line
-
-# f-strings are convenient for string interpolation
-print("My first name is ", first_name, ", and my last name is ", last_name)
-print(f"My name is {first_name} and my last name is {last_name}")
 ```
 
 The `print()` function can take more than one argument.  It concatenates the strings. [2. Built-in Functions — Python 3.10 documentation](https://docs.python.org/3.10/library/functions.html#print)
@@ -283,63 +204,14 @@ Python is case sensitive, so two variables with the same name but different case
   'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
 ```
 
-⚠️ Do **not** create a variable named `print` because that would conflict with the pre-defined `print` function. More on **namespace** later.
+⚠️ Do **not** create a variable named `print` because that would conflict with the pre-defined `print` function, and overwrite the default functionality of `print`.
 
-## Exercise 2: Area of a Circle
-
-Write a program to compute the radius of a circle. There will be three variables `pi`, `radius`, and `area`. Choose an appropriate value for `pi`, a value of your choice for `radius`, and then `area` should be computed appropriately. Print the area.
-
-``` python
-pi = 3.14
-radius = 10
-area = pi * (radius ** 2)
-print(area)
+```python
+>>> print("hello")
+hello
+>>> print = 42
+>>> print("hello")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not callable
 ```
-
-## Exercises
-
-**Exercise 1: More on `print()`**
-
-Run the following commands and observe the output.
-
-``` python
-print('Single Quotes')
-```
-
-``` python
-print("Double Quotes")
-```
-
-``` python
-print('''Triples Quotes are extra
-    helpful because they allow a string
-    to span multiple lines. Don't forget
-    to try this with 'single quotes' and
-    "double" quotes.''')
-```
-
-``` python
-print("Why can't I use single quotes here?")
-# Be sure to answer the question as well
-```
-
-Now write a program that generates the following output:
-
-``` text
-Hello, I'm happy you decided to run this "Python" program!
-```
-
-**Exercise 2: Primes** An integer $p$ is prime if $1$ and $p$ are its only divisors. Show that $149$ is a prime number. Use the fact that $p$ is prime if $p$ `%` $n \neq 0$ for all $n \leq \sqrt{p}$.
-
-**Exercise 3: Fermat's Theorem on the sum of two squares** Fermat's Two Squares Theorem states every prime number $p$ of the form $4k+1$ can be expressed as the some of two squares. For example $5 = 2^2 + 1^1$.
-
-Show that $149$ is of the form $4k+1$ and find numbers $a$ and $b$ such that $a^2 + b^2 = 149$.
-
-**Exercise 4: Reading on variables** Read the article [https://realpython.com/python-variables/](https://realpython.com/python-variables/) and answer the following questions.
-
-- How do you assign multiple variables on the same line to the same value?
-- What is met by the statement, "A Python variable is a symbolic name that is a reference or pointer to an object."?
-- Is `n_a_m_E` a valid variable name?
-- What is the difference between Camel, Pascal, and Snake case?
-
-**Exercise 5: Area and Perimeter of a square** Write a program to compute the area and perimeter of a rectangle and print the values. Use appropriately named variables.
