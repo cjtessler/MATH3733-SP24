@@ -1,0 +1,1 @@
+**Exercise 1: Area and Perimeter of a square** Write a program to compute the area and perimeter of a rectangle and print the values. Use appropriately named variables.
