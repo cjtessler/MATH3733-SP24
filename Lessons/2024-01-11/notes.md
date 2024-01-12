@@ -216,3 +216,6 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: 'int' object is not callable
 ```
+## Exercises
+
+Complete [exercises](../../exercises.md) 1 though 4.
