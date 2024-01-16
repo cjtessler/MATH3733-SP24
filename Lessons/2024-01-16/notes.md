@@ -348,6 +348,8 @@ if x > 0:
     print("x is positive")
 ```
 
+Let's also introduce the `elif` and `else statements`.
+
 ```python
 # branch.py
 
@@ -360,3 +362,21 @@ elif x < 0:
 else:
     print("x is neither positive nor negative!")
 ```
+
+## abc.py
+
+```python
+# abc.py
+
+print("Can I have an a, b, or c?")
+letter = input("> ")
+
+if letter == a or letter == b or letter == c:
+    print("Thanks for the letter!")
+else:
+    print(f"I didn't want a {letter}...")
+```
+
+## Exercises
+
+Complete exercises 5 through 9.
