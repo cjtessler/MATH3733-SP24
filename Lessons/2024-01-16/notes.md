@@ -216,6 +216,8 @@ older_age += 1
 print(f"In three years, you will be {older_age}")
 ```
 
+To exit a program waiting for input, press `Ctrl + C` (Windows) or `Cmd + C` (macOS).
+
 ### ⚠️ Don't use `input` as a variable
 
 ```python
