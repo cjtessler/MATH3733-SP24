@@ -229,7 +229,6 @@ What if the user needs more than one guess?
 
 ## Iteration with `while`
 
-
 ![Alt text](../../Assets/while-loop-diagram.svg)
 
 `while` when we do not know how long something will take.
@@ -249,7 +248,7 @@ while guess != target:
 print("That's it!")
 ```
 
-You will probably get stick in a `while` loop. Use `Ctrl + C` (Windows) or `Cmd + C` (MacOS) to `KeyboardInterrupt` execution.
+You will probably get stuck in a `while` loop. Use `Ctrl + C` (Windows) or `Cmd + C` (MacOS) to `KeyboardInterrupt` execution.
 
 ```python
 # stuck.py
@@ -265,7 +264,7 @@ n = 0
 # n is a counter variable
 # It needs to be declared outside the loop
 
-while n <5:
+while n < 5:
     print(n)
     n += 1
 ```
@@ -310,8 +309,8 @@ while True:
         if counter == 3:
             break
 
-        # increment integer to be checked
-        x += 1
+    # increment integer to be checked
+    x += 1
 
 print(x, 'is divisible by 11 and 12') 
 ```
@@ -321,19 +320,18 @@ print(x, 'is divisible by 11 and 12')
 `for` loops are used when we know how long we need to iterate.
 
 ```python
-# This declare a variable named n
+# This declares a variable named n
 # it takes on the values 0 <= i < n,
 # incrementing each time through the loop
 for n in range(5):
     print(n)
 ```
 
-
-Exercise [TBD] will cover more details about the `range` function.
+Exercise 11 will cover more details about the `range` function.
 
 ## `continue`
 
-The `continue` keyword is used end the current iteration in a loop and continue to the next iteration.
+The `continue` keyword is used to end the current iteration in a loop and continue to the next iteration.
 
 ```python
 for n in range(5):
@@ -355,7 +353,7 @@ for i in range(123_456_789):
 
 print(total)
 
-# Alternatively, used the closed-form formula for the sum of n squares
+# Alternatively, use the closed-form formula for the sum of n squares
 n = 123_456_789
 total = (n * (n + 1) * (2 * n +1)) / 6
 print(total)
