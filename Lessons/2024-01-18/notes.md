@@ -363,4 +363,4 @@ print(total)
 
 ## Exercises
 
-Complete exercises ...
+Complete exercises 11 through 14.
