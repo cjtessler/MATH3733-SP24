@@ -1,4 +1,4 @@
-# Sqaure
+# Square
 
 ## Nested Loops
 
@@ -20,7 +20,7 @@ Write a program that uses only two output statements, `print("#", end="")` and `
 
 ## Expected Output
 
-``` plaintext
+```text
 #####
 #####
 #####
