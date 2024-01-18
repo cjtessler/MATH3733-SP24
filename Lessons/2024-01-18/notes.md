@@ -4,6 +4,8 @@
 
 - Booleans
 - Conditionals
+- `while`
+- `for`
 
 ## Boolean Expressions
 
@@ -288,8 +290,6 @@ while True:
 print(f"{x} is divisible by 11 and 12")
 ```
 
-## VS Code Debugging
-
 ## Exercise
 
 Find the *third* positive integer divisible by 17 and 23.
@@ -360,6 +360,8 @@ n = 123_456_789
 total = (n * (n + 1) * (2 * n +1)) / 6
 print(total)
 ```
+
+## VS Code Debugging
 
 ## Exercises
 
