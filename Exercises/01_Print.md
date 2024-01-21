@@ -28,3 +28,11 @@ Now write a program that generates the following output:
 ``` text
 Hello, I'm happy you decided to run this "Python" program!
 ```
+
+<details>
+<summary style="font-weight:bold">Solution</summary>
+<br>
+    
+``` python
+print('''Hello, I'm happy you decided to run this "Python" program!''')
+```
