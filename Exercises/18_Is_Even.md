@@ -2,9 +2,9 @@
 
 Write a function `is_even` that takes as input an integer parameter and **returns** `True` if the input is even and `False` otherwise.
 
-# Example
+## Example
 
-```
+```python
 >>> is_even(2)
 True
 >>> is_even(3)
@@ -22,4 +22,5 @@ def is_even(number):
     else:
         return False
 ```
+
 </details>

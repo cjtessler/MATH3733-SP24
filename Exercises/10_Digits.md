@@ -20,7 +20,7 @@ Given a number. Find the sum of its digits.
 13579
 ```
 
-## Example output 1
+## Example output 2
 
 ```text
 25

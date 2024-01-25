@@ -1,7 +1,8 @@
-# String Slices
+# Slices
 
-First, copy the following starter code into your python file. Then read the instructions.
+## Starter Code
 
+Start with the following code.
 
 ```python
 # Read a string:
@@ -35,21 +36,21 @@ print()
 print()
 ```
 
-# Instructions
+## Instructions
 
 You are given a string. Complete the input to the `print()` function that satisfies the directions in the above comment.
 
 Here is a review of Python string slicing: [https://www.digitalocean.com/community/tutorials/how-to-index-and-slice-strings-in-python-3](https://www.digitalocean.com/community/tutorials/how-to-index-and-slice-strings-in-python-3)
 
-# Example input
+## Example input
 
-```
+```text
 Abrakadabra
 ```
 
-# Example output
+## Example output
 
-```
+```text
 r
 r
 Abrak

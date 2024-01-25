@@ -1,5 +1,9 @@
-# Instructions
-Copy the following code into your codespace:
+# Hourglass
+
+## Starter Code
+
+Start with the following code.
+
 ```python
 def outer():
     ...
@@ -27,16 +31,15 @@ print()
 build_diamond()
 ```
 
-Replace the `...` in the function definitions with `print` statements to build an hourglass and a diamond. 
+Replace the `...` in the functions' bodies with `print` statements to build an hourglass and a diamond.
 
-A function without a body will result in an error, so elipses `...` are used as placeholder. This way development can occur without the Python interpreter raising errors. 
+A function without a body will result in an error, so ellipses `...` are used as placeholder. This way development can occur without the Python interpreter raising errors.
 
-Use functions to break up the problem into reusable blocks of code, **but do NOT change function names**. 
+Use functions to break up the problem into reusable blocks of code, **but do NOT change function names**.
 
-
-# Desired Output
+## Desired Output
  
-```
+```text
 #####
 #   #
  # # 
