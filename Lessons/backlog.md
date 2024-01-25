@@ -1,9 +1,60 @@
 # Day 5
 
+## Announcement
+
+- Project 1 Due at 11:59 PM. For submission:
+    1. Create a folder titled "LastName_P1", where LastName is your last name (e.g., Tessler_P1).
+    2. Put your implementations `change.py`, `savings.py`, and `change_challenge.py` in the folder.
+    3. Right-click on the folder and download the folder.
+       - You might need to read create an empty folder on your local system to save the folder to.
+    4. Compress the folder the folder.
+
 ## Plan
 
+- Bisection Method
 - Functions
-- 
+
+## Bisection Method
+
+Here is an implementation of the bisection search.
+
+```python
+# Find the square root of a number x
+x = int(input(">"))
+epsilon = 0.01
+low = 0
+high = max(1, x)
+guess = (high + low) / 2
+num_guesses = 1
+
+# Perform bisection search for the square root
+while abs(guess ** 2 - x) >= epsilon:
+    print(f"low: {low}, high: {high}, guess: {guess}")
+    num_guesses += 1
+    if guess ** 2 < x:
+        low = guess
+    else:
+        high = guess
+    guess = (high + low) / 2
+
+# Outside the while loop
+print("Number of guess:", num_guesses)
+print(guess, "is close to the square root of x")
+```
+
+**Exercise:** Empire State Building is 102 stories high. A man wants to know the highest floor from which he could drop an egg without the egg breaking. He proposed to drop an egg from the top floor, and if it broke, he would go down one floor and try again. At worst, this method would take 102 eggs. In the worst-case scenario (the egg always breaks), how many eggs would be used if he used a bisection search instead?
+
+**Solution:** He would test on the following floors:
+
+- (0+102) // 2 = 51
+- (0+51) // 2 = 25 (We use integer division since we cannot have a half floor)
+- (0+25) // 2 = 12
+- (0+12) // 2 = 6
+- (0+6) // 2 = 3
+- (0+3) // 2 = 1
+- (0 +1) // 2 = 0
+
+He would use 7 eggs. Notice $$\log_2(102) \approx 7$$.
 
 ## Basic Functions
 
