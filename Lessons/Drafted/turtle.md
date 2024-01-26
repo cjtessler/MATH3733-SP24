@@ -1,7 +1,6 @@
-
-# Day 08: Turtle
-
 ## Introduction to Turtle Module
+
+Requirement: 100 minutes
 
 [https://www.reddit.com/r/Python/comments/7mo2l8/turtle_module_drawing_a_randomised_landscape/](https://www.reddit.com/r/Python/comments/7mo2l8/turtle_module_drawing_a_randomised_landscape/)
 
