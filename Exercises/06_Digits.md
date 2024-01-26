@@ -13,3 +13,18 @@ Given a two-digit integer, print its left digit (a tens digit) and then its righ
 ```text
 7 9
 ```
+
+<details>
+<summary style="font-weight:bold">Solution</summary>
+<br>
+
+``` python
+n = input()
+
+tens = int(n) // 10
+ones = int(n) % 10
+
+print(tens, ones)
+```
+
+</details>

@@ -46,3 +46,22 @@ Consider the cases:
 False
 ```
 6 is greater than 1+2
+
+<details>
+<summary style="font-weight:bold">Solution</summary>
+<br>
+
+``` python
+a = int(input())
+b = int(input())
+c = int(input())
+
+if a == 0 or b == 0 or c == 0:
+    print(False)
+elif a > (b + c) or b > (a + c) or c > (a + b):
+    print(False)
+else: 
+    print(True)
+```
+
+</details>
