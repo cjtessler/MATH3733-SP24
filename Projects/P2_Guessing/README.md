@@ -61,6 +61,8 @@ Hello Guesser! I, the computer 🤖, am thinking of a number.
 Play again?
 1: Yes
 2: No
+> 2
+Thanks for playing!
 ```
 
 ### Part 2
@@ -106,6 +108,8 @@ Enter a positive integer! I am not looking! 🙈
 Play again?
 1: Yes
 2: No
+> 2
+Thanks for playing!
 ```
 
 ### Part 3
@@ -165,6 +169,8 @@ Enter a positive integer! I am not looking! 🙈
 Play again?
 1: Yes
 2: No
+> 2
+Thanks for playing!
 ```
 
 ### Part 4
@@ -230,6 +236,8 @@ Enter a positive integer! I am not looking! 🙈
 Play again?
 1: Yes
 2: No
+> 2
+Thanks for playing!
 ```
 
 Note that the (modified) linear search actually performed better in this case.
@@ -299,10 +307,18 @@ The following list shows the point distribution for each part. Match the output 
 | **0**                | Variables names are descriptive                                                                                                                                                                                                  |
 | **0**                | Spacing and style are consistent throughout the entire program.                                                                                                                                                                  |
 
-
 ## Closing Remarks
 
 Any edits or clarifications to the project will be announced in class and shown in the changelog below. Good luck and have fun!
 
 ### Changelog
 
+February 5, 2024: Updated program output examples to match starter code to completion. For example:
+
+``` text
+Play again?
+1: Yes
+2: No
+> 2
+Thanks for playing!
+```
