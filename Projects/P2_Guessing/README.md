@@ -4,9 +4,9 @@
 
 **Read through the entire project description before beginning.**
 
-This project will consist of five parts. Your overall goal is create a guessing game with different game modes and level of difficulties. Each part will develop the game further.
+This project will consist of five parts. Your overall goal is to create a guessing game with different game modes and levels of difficulty. Each part will develop the game further.
 
-In part 1, you will write a mode where the computer chooses a random number and you need to guess it. In parts 2-4, you will write various guessing algorithms where the computer takes on the role of the guesser and you the role of the number generators. In part 5, you will implement at least one additional feature from a suggested list and document your design process.
+In part 1, you will write a mode where the computer chooses a random number, and you need to guess it. In parts 2-4, you will write various guessing algorithms where the computer takes on the role of the guesser and you the role of the number generator. In part 5, you will implement at least one additional feature from a suggested list and document your design process.
 
 *Cite referenced websites and/or collaborators in a file `COLLABORATION.md`. There should be no peer collaboration on part 5. Remember to only discuss problems at a high level with your peers.*
 
@@ -28,7 +28,7 @@ Students may collaborate on the projects, meaning you're free to seek help from 
 
 ## Instructions
 
-First, read [PEP 8 - Style Guide for Python Code](https://peps.python.org/pep-0008/) and begin following recommended coding conventions. Google also has a a [Python Style Guide](https://google.github.io/styleguide/pyguide.html).
+First, read [PEP 8 - Style Guide for Python Code](https://peps.python.org/pep-0008/) and begin following recommended coding conventions. Google also has a [Python Style Guide](https://google.github.io/styleguide/pyguide.html).
 
 A significant amount of starter code has been provided. It will handle the flow of the program, but it is up to you to implement the logic for the different game modes. Carefully read through the starter code to understand how the flow of the program. **You will complete the four functions in the "Student Code" section of `main.py` in parts 1 through 4.**
 
@@ -114,9 +114,9 @@ Thanks for playing!
 
 ### Part 3
 
-You will need to complete the function `play_generator_mode_medium`. In this mode, the user will play as "the number generator". The computer should intelligently guess in a linearly until overshooting and then reverse direction using a lower magnitude. See the output below for an example of the strategy. The number of guesses it takes the computer should be tracked and shown upon success.
+You will need to complete the function `play_generator_mode_medium`. In this mode, the user will play as "the number generator". The computer should intelligently guess linearly until overshooting and then reverse direction using a lower magnitude. See the output below for an example of the strategy. The number of guesses it takes the computer should be tracked and shown upon success.
 
-You may use the provided helper function `human_responds` to inform the user if they were too high or show. Be sure to read the docstring to see how this function works. Note that the computer overshoots the guess then `abs(previous_response - current_response) == 2`.
+You may use the provided helper function `human_responds` to inform the user if they were too high or show. Be sure to read the docstring to see how this function works. Note that the computer overshoots the guess, then `abs(previous_response - current_response) == 2`.
 
 Here is the running of a valid implementation:
 
@@ -175,9 +175,9 @@ Thanks for playing!
 
 ### Part 4
 
-You will need to complete the function `play_generator_mode_hard`. In this mode, the user will play as "the number generator". The computer should intelligently guess in a using a bisection search. See the output below for an example of the strategy. The number of guesses it takes the computer should be tracked and shown upon success.
+You will need to complete the function `play_generator_mode_hard`. In this mode, the user will play as "the number generator". The computer should intelligently guess using a bisection search. See the output below for an example of the strategy. The number of guesses it takes the computer should be tracked and shown upon success.
 
-Note that initially the computer will need to start with a linear search to find low and high values in order to begin the bisection search.
+Note that initially, the computer will need to start with a linear search to find low and high values in order to begin the bisection search.
 
 Here is the running of a valid implementation:
 
@@ -309,16 +309,7 @@ The following list shows the point distribution for each part. Match the output 
 
 ## Closing Remarks
 
-Any edits or clarifications to the project will be announced in class and shown in the changelog below. Good luck and have fun!
+Any edits or clarifications to the project will be announced in class and shown in the changelog below. Good luck, and have fun!
 
 ### Changelog
 
-February 5, 2024: Updated program output examples to match starter code to completion. For example:
-
-``` text
-Play again?
-1: Yes
-2: No
-> 2
-Thanks for playing!
-```
