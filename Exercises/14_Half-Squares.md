@@ -76,3 +76,17 @@ Write a program that uses only two output statements, `print("#", end="")` and `
 #
 ```
 
+<details>
+<summary style="font-weight:bold">Solution</summary>
+<br>
+
+``` python
+n = int(input())
+
+for i in range(n):
+    for j in range(n-i):
+        print("#", end ="")
+    print()
+```
+
+</details>

@@ -53,3 +53,43 @@ Use functions to break up the problem into reusable blocks of code, **but do NOT
  # # 
   #  
 ```
+
+<details>
+<summary style="font-weight:bold">Solution</summary>
+<br>
+
+``` python
+def outer():
+    print("#####")
+
+def edge():
+    print("#   #")
+
+def almost_middle():
+    print(" # # ")
+
+def middle():
+    print("  #  ")
+
+def build_hourglass():
+    outer()
+    edge()
+    almost_middle()
+    middle()
+    almost_middle()
+    edge()
+    outer()
+
+def build_diamond():
+    middle()
+    almost_middle()
+    almost_middle()
+    middle()
+
+## DO NOT CHANGE ANYTHING BELOW THIS LINE
+build_hourglass()
+print()
+build_diamond()
+```
+
+</details>

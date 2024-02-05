@@ -42,3 +42,17 @@ Now, using the `range` function, print the sequence `2, 5, 8`, a new line, and t
 20 15 10 5 0 -5
 ```
 
+<details>
+<summary style="font-weight:bold">Solution</summary>
+<br>
+
+``` python
+for i in range(2, 9, 3):
+    print(i, end=" ")
+print()
+for i in range(20, -6, -5):
+    print(i, end=" ")
+print()
+```
+
+</details>

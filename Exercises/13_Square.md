@@ -27,3 +27,16 @@ Write a program that uses only two output statements, `print("#", end="")` and `
 #####
 #####
 ```
+
+<details>
+<summary style="font-weight:bold">Solution</summary>
+<br>
+
+``` python
+for i in range(5):
+    for j in range(5):
+        print("#", end="")
+    print()
+```
+
+</details>

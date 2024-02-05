@@ -38,3 +38,15 @@ You will need to use iteration, e.g., a `for` loop.
 ```text
 #####
 ```
+
+<details>
+<summary style="font-weight:bold">Solution</summary>
+<br>
+
+``` python
+for i in range(5):
+    print("#", end="")
+print()
+```
+
+</details>

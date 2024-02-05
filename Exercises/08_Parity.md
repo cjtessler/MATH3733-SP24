@@ -15,3 +15,18 @@ You may assume the valid input is provided, i.e., you are not expected to guard 
 ``` python
 even
 ```
+
+<details>
+<summary style="font-weight:bold">Solution</summary>
+<br>
+
+``` python
+n = int(input())
+
+if n % 2 == 0:
+    print("even")
+else:
+    print("odd")
+```
+
+</details>

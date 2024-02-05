@@ -16,3 +16,17 @@ The program reads the numbers N and K. It should print the two answers for the q
 8
 2
 ```
+
+<details>
+<summary style="font-weight:bold">Solution</summary>
+<br>
+
+``` python
+N = int(input())
+K = int(input())
+
+print(K // N)
+print(K % N)
+```
+
+</details>

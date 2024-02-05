@@ -9,7 +9,7 @@ Write a program to compute the area and perimeter of a rectangle and print the v
 ```python
 shortSide = int(input())
 longSide = int(input())
-area = shortSide*  longSide
+area = shortSide *  longSide
 print(area)
 perimeter = (2 * shortSide) + (2 * longSide)
 print(perimeter)
