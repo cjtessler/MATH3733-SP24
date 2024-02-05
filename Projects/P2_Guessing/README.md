@@ -313,3 +313,12 @@ Any edits or clarifications to the project will be announced in class and shown 
 
 ### Changelog
 
+February 5, 2024: Cleaned up typos. Updated program output examples to match starter code to completion. For example:
+
+``` text
+Play again?
+1: Yes
+2: No
+> 2
+Thanks for playing!
+```
