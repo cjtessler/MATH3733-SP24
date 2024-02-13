@@ -1,37 +1,40 @@
 # Day X: Lists
 
-## Lists
+List are used to store multiple items is a single variable.
 
 ``` python
-##### Lists #####
-# Lists are used to store multiple items in a single variable.
+# scores.py
 
-### Grades...
-## ...with variables
+# Grades with variables
 t1 = 100
 t2 = 90
 t3 = 70.5
 
-## ...with lists
+# Grades with lists
 grades = [100, 90, 80]
 print(grades)
 print(grades[0])
 print(grades[1:2])
 
-### Add grades to the list
-## Operations
-grades = grades + [70, 60, 50] # concatenates list
-print(grades)   # [100, 90, 80, 70, 60, 50]
-grades *= 2     # concatenates a copy of the current list to the end
-print(grades)   # [100, 90, 80, 70, 60, 50, 100, 90, 80, 70, 60, 50]
+# Add grades to the list / Concatenate
+grades = grades + [70, 60, 50]
+print(grades)   
+# [100, 90, 80, 70, 60, 50]
 
-## Append Method
+grades *= 2     # concatenates a copy of the current list to the end
+print(grades)
+# [100, 90, 80, 70, 60, 50, 100, 90, 80, 70, 60, 50]
+
+# The 'append' method
 grades = [100, 80, 70]
 grades.append(42)
-print(grades)   # [100, 80, 70, 42]
+print(grades)
+# [100, 80, 70, 42]
 
-grades[1] = 100 # list are mutable
-print(grades)   # [100, 100, 80, 42]
+# List are mutable
+grades[1] = 100
+print(grades)
+# [100, 100, 80, 42]
 
 ## Wrong ways...
 grades = grades.append(42)  # deletes current grade list
@@ -39,12 +42,16 @@ grades + [42]               # does not save new item
 grades = grades + 42        # list concatenation requires two lists
 
 
-### Iterating over a list
+# Iterating over a list
 for grade in grades:
     print(grades)
+```
 
-### Exercise: Write a program that counts the number of A's, B's, C's, and failures in a list of grades. Use a 10-point scale.
+## Exercise
 
+Write a program that counts the number of A's, B's, C's, and failures in a list of grades. Use a 10-point scale.
+
+```python
 # generates random list of 30 grades
 from random import randrange
 
@@ -77,7 +84,11 @@ print ("A's: ", a)
 print ("B's: ", b)
 print ("C's: ", c)
 print ("Fails: ", fail)
+```
 
+## Modifying lists
+
+```python
 ### Use indexing when modifying elements
 ## Taxes
 prices = [0.99, 14.95, 7.00]
@@ -103,8 +114,6 @@ else:
     print('nope')
     
 ```
-
-# Day 15: More on Lists, Tuples, Comprehensions
 
 ## Removing elements
 
@@ -292,9 +301,7 @@ number = "123"
 s = sum([int(d) for d in number])
 print(s)    # 6
 
-
 # Tuple comprehensions use parentheses () instead of brackets [].
-# Dictionary comprehensions use braces {}.
 ```
 
 ## List Comprehension Exercises
@@ -311,9 +318,7 @@ Use a nested list comprehension to find all of the numbers from 1-1000 that are 
 
 For all the numbers 1-1000, use a nested list/dictionary comprehension to find the highest single digit by which a number is divisible.
 
-Use a dictionary comprehension to count the length of each word in a sentence.
-
-(We will learn about dictionaries in the next lesson).
+# TODO: Command Line Arguments
 
 # Day 16: Dictionaries
 
@@ -359,6 +364,10 @@ print(eng2sp)
 print(eng2sp['two'])
 print(eng2sp['four']) # KeyError
 ```
+
+### Dictionary Comprehension
+
+Use a dictionary comprehension to count the length of each word in a sentence.
 
 ### Iterating through Dictionaries
 
