@@ -20,7 +20,6 @@ If you don't know how to start solving this assignment, please, review a theory 
 
 https://snakify.org/lessons/lists/ 
 
-
 You may also try step-by-step theory chunks:
 
 https://snakify.org/lessons/lists/steps/1/
