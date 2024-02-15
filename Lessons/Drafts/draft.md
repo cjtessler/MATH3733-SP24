@@ -1,4 +1,5 @@
 
+# Day 10: Lists Continued
 
 ## Removing elements
 
@@ -203,7 +204,128 @@ Use a nested list comprehension to find all of the numbers from 1-1000 that are 
 
 For all the numbers 1-1000, use a nested list/dictionary comprehension to find the highest single digit by which a number is divisible.
 
-# TODO: Command Line Arguments
+# Command Line Arguments
+
+Up to this point, we have given input to our programs with the `input` function.
+
+```python
+# greeting1.py
+name = input("Enter your name:")
+print(f"Hello, {name}!")
+```
+
+It might be useful to start the program with some input already provided. We can can do this with **command line arguments**.
+
+```python
+# greeting2.py
+import sys
+print ('argument list', sys.argv)
+name = sys.argv[1]
+print (f"Hello, {name}!")
+```
+
+If an argument is required, we need to check for it at the beginning of the program.
+
+```python
+import sys
+
+if len(sys.argv) < 2:
+    print ('Usage: python hello.py <name>')
+    sys.exit(1)
+
+print ('argument list', sys.argv)
+name = sys.argv[1]
+print (f"Hello, {name}!")
+```
+
+If the user doesn't know how to use the program, then a help menu would need to be created. If the program requires multiple arguments, then logic would need to be set up to parse the list. If the user enters the program options, then that would need to be guarded against. There is a lot of work to parsing command line arguments.
+
+For example, type `python -h` or `python --help` in the terminal.
+
+Fortunately, the `argparse` module is a part of the Python standard library, and provides tools for writing command line interfaces.
+
+```python
+# greeting3.py
+import argparse
+
+parser = argparse.ArgumentParser(
+    description="Provides a personal greeting"
+)
+
+parser.add_argument(
+    "-n", "--name", required=True,
+    help="Name to greet"
+)
+
+args = parser.parse_args()
+print(args)
+
+print(f"Hello, {args.name}!")
+```
+
+Let's add an option where the user can change the greeting.
+
+```python
+# greeting3.py
+import argparse
+
+parser = argparse.ArgumentParser(
+    description="Provides a personal greeting"
+)
+
+parser.add_argument(
+    "-n", "--name", required=True,
+    help="Name to greet"
+)
+
+parser.add_argument(
+    "-g", "--greeting", default="Hello",
+    help="Greeting to use"
+)
+
+args = parser.parse_args()
+print(args)
+
+print(f"{args.greeting}, {args.name}!")
+```
+
+## Exercise
+
+Exercise add an argument to the parser that will allow the user to specify the number of times the greeting is repeated. Use the `choices` named parameter for `add_argument` to limit the repetition to at most three times.
+
+```python
+# greeting3.py
+import argparse
+
+parser = argparse.ArgumentParser(
+    description="Provides a personal greeting"
+)
+
+parser.add_argument(
+    "-n", "--name", required=True,
+    help="Name to greet"
+)
+
+parser.add_argument(
+    "-g", "--greeting", default="Hello",
+    help="Greeting to use"
+)
+
+# Solution
+parser.add_argument(
+    "-r", "--repeat", type=int, default=1,
+    choices=[1, 2, 3],
+    help="Number of times to repeat the greeting"
+)
+
+args = parser.parse_args()
+
+# Solution
+for _ in range(args.repeat):
+    print(f"{args.greeting}, {args.name}!")
+```
+
+Check out the documentation for [`argparse`](https://docs.python.org/3/library/argparse.html) for more information.
 
 # Day 16: Dictionaries
 
