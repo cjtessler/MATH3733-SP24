@@ -44,7 +44,6 @@ my_list = [9, 3, 11]
 my_list.sort()          # modifies original list
 print(my_list)          # [3, 9, 11]
 
-
 # sorted function
 my_list = [9, 3, 11]
 print(sorted(my_list))  # returns a copy that is sorted
@@ -53,17 +52,14 @@ print(my_list)          # [9, 3, 11]
 my_list.reverse()       # modifies original list
 print(my_list)          # [11, 3, 9]
 
-
 # index
 my_list = [9, 3, 11]
 print(my_list.index(3)) # 1
 print(my_list.index(5)) # ValueError
 
-
 # extrema
 print(min(my_list))     # 3
 print(max(my_list))     # 9
-
 
 # split
 text = "Hello world!"
@@ -74,13 +70,11 @@ scores = '90,67,87,102,77,80'
 nums = scores.split(',')
 print(nums)             # ['90', '67', '87', '102', '77', '80']
 
-
 # list
 letters = list("hello") 
 print(letters)          # ['h', 'e', 'l', 'l', 'o']
 print(list(range(10)))  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 print(list(10))         # # TypeError: 'int' object is not iterable
-
 
 # join (string method)
 "".join(letters)        # 'hello'
@@ -125,7 +119,7 @@ make_grocery_list()
 ##### Nested Lists #####
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
-matrix = [[1, 2, 3],    # Cleaner code
+matrix = [[1, 2, 3],    # Cleaner
           [4, 5, 6],
           [7, 8, 9]]
 
@@ -135,8 +129,6 @@ print(matrix[1][1])     # 5
 ## Tuples
 
 ``` python
-##### Tuples #####
-
 # Tuples are essentially immutable lists.
 dimensions = (1920, 1080)
 print(dimensions[0])
@@ -149,9 +141,9 @@ dimensions = (1280, 720)
 
 ## Comprehensions
 
-``` python
-##### List Comprehensions #####
+We first look at **list comprehensions**, although there are comphrensions for of the other data structures in Python (tuples, sets, and dictionaries).
 
+``` python
 my_squares = []
 for x in range(10):
     my_squares.append(x**2)
@@ -186,23 +178,7 @@ print(small_words)  # ['the', 'fox', 'the', 'dog']
 number = "123"
 s = sum([int(d) for d in number])
 print(s)    # 6
-
-# Tuple comprehensions use parentheses () instead of brackets [].
 ```
-
-## List Comprehension Exercises
-
-Find all of the numbers from 1-1000 that have a 3 in them.
-
-Count the number of spaces in a string.
-
-Remove all of the vowels in a string.
-
-## Comprehension Challenges
-
-Use a nested list comprehension to find all of the numbers from 1-1000 that are divisible by any single digit besides 1 (2-9)
-
-For all the numbers 1-1000, use a nested list/dictionary comprehension to find the highest single digit by which a number is divisible.
 
 # Command Line Arguments
 
