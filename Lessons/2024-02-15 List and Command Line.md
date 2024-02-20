@@ -1,7 +1,8 @@
+# Day 10: More on Lists and Command Line Arguments
 
-# Day 10: Lists Continued
+## More on Lists
 
-## Removing elements
+### Removing elements
 
 ``` python
 c = [1, 2, 3]
@@ -36,7 +37,9 @@ print(value_at_zero)
 
 See [PythonTutor Example of Aliasing](https://pythontutor.com/visualize.html#code=%23%20Initialize%20list%20c%0Ac%20%3D%20%5B1,%202,%203%5D%0A%0A%23%20Copy%20list%20c%0Amy_list%20%3D%20c%5B%3A%5D%0A%0A%23%20Remove%201%20from%20my_list%0Amy_list.remove%281%29%0A%0A%23%20Create%20an%20alias%20to%20list%20c%0Aalias_list%20%3D%20c%0A%0Aalias_list.remove%281%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false).
 
-## Various Methods
+### List Methods
+
+Experiment with all of the lists methods: [https://www.w3schools.com/python/python_ref_list.asp](https://www.w3schools.com/python/python_ref_list.asp).
 
 ``` python
 # sort method
@@ -80,7 +83,7 @@ print(list(10))         # # TypeError: 'int' object is not iterable
 "".join(letters)        # 'hello'
 ```
 
-## Exercise
+### Exercise
 
 ``` python
 # Exercise: Grocery List Input
@@ -113,7 +116,7 @@ def make_grocery_list():
 make_grocery_list()
 ```
 
-## Nested List
+### Nested Lists
 
 ``` python
 ##### Nested Lists #####
@@ -126,7 +129,7 @@ matrix = [[1, 2, 3],    # Cleaner
 print(matrix[1][1])     # 5
 ```
 
-## Tuples
+### Tuples
 
 ``` python
 # Tuples are essentially immutable lists.
@@ -139,7 +142,7 @@ dimensions[0] = 1080 # TypeError
 dimensions = (1280, 720)
 ```
 
-## Comprehensions
+### Comprehensions
 
 We first look at **list comprehensions**, although there are comphrensions for of the other data structures in Python (tuples, sets, and dictionaries).
 
@@ -180,7 +183,7 @@ s = sum([int(d) for d in number])
 print(s)    # 6
 ```
 
-# Command Line Arguments
+## Command Line Arguments
 
 Up to this point, we have given input to our programs with the `input` function.
 
@@ -266,7 +269,7 @@ print(args)
 print(f"{args.greeting}, {args.name}!")
 ```
 
-## Exercise
+### Exercise
 
 Exercise add an argument to the parser that will allow the user to specify the number of times the greeting is repeated. Use the `choices` named parameter for `add_argument` to limit the repetition to at most three times.
 
