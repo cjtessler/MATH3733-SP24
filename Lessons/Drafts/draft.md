@@ -4,18 +4,18 @@
 
 ## Dictionaries
 
-[https://docs.python.org/3.8/tutorial/datastructures.html#dictionaries](https://docs.python.org/3.8/tutorial/datastructures.html#dictionaries)
+[https://docs.python.org/3/tutorial/datastructures.html](https://docs.python.org/3/tutorial/datastructures.html)
 
 ### Dictionary Syntax
 
 ``` python
-##### Dictionaries #####
 # A dictionary is more general than a list.
 # A list's elements were accessed using integer indices.
-# A dictionary's elements are accessed by using key.
+# A dictionary's 'values' are accessed by using 'keys'.
+# It's elements are key-value pairs.
 
 # Initialize an empty dictionary
-eng2sp = dict()     # This one has some other advantages (see documentation)
+eng2sp = dict()
 eng2sp = {}
 print(eng2sp)
 
@@ -45,10 +45,6 @@ print(eng2sp['two'])
 print(eng2sp['four']) # KeyError
 ```
 
-### Dictionary Comprehension
-
-Use a dictionary comprehension to count the length of each word in a sentence.
-
 ### Iterating through Dictionaries
 
 ``` python
@@ -70,6 +66,21 @@ for value in eng2sp.values():
 # Iterate through key and values
 for key, val in eng2sp.items():
     print(key, val)
+```
+
+### Dictionary Comprehension
+
+Use a dictionary comprehension to count the length of each word in a sentence.
+
+```python
+sentence = "The quick brown fox jumps over the lazy dog"
+word_lengths = {}  # Initialize an empty dictionary
+
+# Split the sentence into words and loop through each word
+for word in sentence.split():
+    word_lengths[word] = len(word)  # Set the word as key and its length as value in the dictionary
+
+word_lengths = {word: len(word) for word in sentence.split()}
 ```
 
 ### Dictionaries as a Collection of Counter
@@ -98,50 +109,34 @@ h = histogram('parrot')
 print(h)    # {"p": 1, "a": 1, "r": 2, "o": 1, "t": 1}
 ```
 
+### Exercise
+
+Create a Contacts Dictionary:
+
+1. Start by creating an empty dictionary named `contacts`.
+    - Add three contacts to the dictionary. Each contact should have a name as the key and their phone number as the value.
+
+2. Add a New Contact:
+    - Prompt the user to enter a new contact name and their phone number.
+    - Check if the contact already exists in the dictionary. If it does, print a message saying the contact is already in the dictionary. Otherwise, add the new contact to the dictionary.
+  
+3. Update a Contact's Phone Number:
+
+    - Prompt the user to enter the name of a contact whose phone number they want to update.
+    - If the contact exists, prompt for the new phone number and update the contact's phone number in the dictionary. If the contact does not exist, print a message saying so.
+
+4. Retrieve and Display a Contact's Phone Number:
+
+    - Prompt the user to enter the name of a contact whose phone number they wish to retrieve.
+    - Check if the contact exists in the dictionary. If it does, print the contact's name and phone number. If not, print a message indicating that the contact was not found.
+
+5. Bonus: Display All Contacts:
+
+    - Write a piece of code that prints all the contacts in the dictionary, formatted nicely. For example, each contact should be printed on a new line with the format: `Name: Phone Number`.
+
 ## Passing by reference
 
 [Python Tutor - Passing by Reference](https://pythontutor.com/visualize.html#code=a%20%3D%20%5B1,%202,%203%5D%0A%0Adef%20f%28lst%29%3A%0A%20%20%20%20lst.append%284%29%0A%0Af%28a%29%0A%0Aprint%28a%29&cumulative=false&curInstr=7&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
-
-## Memoization
-
-``` python
-# Fibonacci Revisited
-def fib(n):
-    if n == 1 or n == 2:
-        return 1
-    else:
-        return fib(n-1) + fib(n-2)
-
-memo = {
-    1: 1, 
-    2: 1
-}
-
-def fib_memo(n: int, memo: dict) -> int:
-    if n in memo:
-        return memo[n]
-    else:
-        memo[n] = fib_memo(n-1, memo) + fib_memo(n-2, memo)
-        return memo[n]
-
-
-from time import time
-n = 35
-
-start = time()
-print(fib(n))
-end = time()
-print(f"fib({n}) took {end-start} seconds")         # 3.393 seconds
-
-start = time()
-print(memo_fib(n, memo))
-end = time()
-print(f"memo_fib({n}) took {end-start} seconds")    # 0.000038 seconds
-```
-
-[Fibonacci Memoization Tree](https://youtu.be/oBt53YbR9Kk?t=1913)
-
-# Day 17: Memoization
 
 ## Memoization
 
