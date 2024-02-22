@@ -135,3 +135,80 @@ print(h)    # {"p": 1, "a": 1, "r": 2, "o": 1, "t": 1}
 
 5. Bonus: Display All Contacts.
     - Write a piece of code that prints all the contacts in the dictionary, formatted nicely. For example, each contact should be printed on a new line with the format: `Name: Phone Number`.
+
+<details>
+<summary style="font-weight:bold">Solution</summary>
+
+```python
+# Step 1: Create a Contacts Dictionary
+contacts = {
+    "Alice": "123-456-7890",
+    "Bob": "987-654-3210",
+    "Charlie": "555-555-5555"
+}
+
+# Function to add a new contact
+def add_contact():
+    name = input("Enter the new contact's name: ")
+    number = input("Enter the new contact's phone number: ")
+    if name in contacts:
+        print(f"{name} is already in your contacts.")
+    else:
+        contacts[name] = number
+        print(f"{name} added to contacts.")
+
+# Function to update a contact's phone number
+def update_contact():
+    name = input("Enter the name of the contact to update: ")
+    if name in contacts:
+        new_number = input(f"Enter {name}'s new phone number: ")
+        contacts[name] = new_number
+        print(f"{name}'s phone number updated.")
+    else:
+        print(f"Contact {name} not found.")
+
+# Function to retrieve and display a contact's phone number
+def retrieve_contact():
+    name = input("Enter the name of the contact to retrieve: ")
+    if name in contacts:
+        print(f"{name}: {contacts[name]}")
+    else:
+        print(f"Contact {name} not found.")
+
+# Function to display all contacts
+def display_all_contacts():
+    print("Your contacts:")
+    for name, number in contacts.items():
+        print(f"{name}: {number}")
+
+# Main function to drive the program
+def main():
+    while True:
+        print("\nWhat would you like to do?")
+        print("1. Add a new contact")
+        print("2. Update a contact's phone number")
+        print("3. Retrieve a contact's phone number")
+        print("4. Display all contacts")
+        print("5. Exit")
+        choice = input("Enter your choice (1-5): ")
+
+        if choice == "1":
+            add_contact()
+        elif choice == "2":
+            update_contact()
+        elif choice == "3":
+            retrieve_contact()
+        elif choice == "4":
+            display_all_contacts()
+        elif choice == "5":
+            print("Exiting the program. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please enter a number between 1 and 5.")
+
+# Execute the program
+if __name__ == "__main__":
+    main()
+```
+
+</summary>
