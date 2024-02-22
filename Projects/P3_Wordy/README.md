@@ -223,6 +223,8 @@ For this problem, you’ll implement a program that behaves similarly to the pop
 
 ![wordle1](images/wordle1.png)
 
+*Note: The first line should be `$python wordle.py -s 5`*
+
 ### Background
 
 If you have yet to play Wordle, give it a try! Each day, a new “secret word” is chosen (the same for everyone) and the object is to guess what the secret word is within six tries. Fortunately, given that there are more than six five-letter words in the English language, you may get some clues along the way, and the image above actually shows your friend’s progression through their guesses, using those clues to try to home in on the correct word. Using a scheme similar to the game Mastermind, if after you guess that letter turns green, it means not only is that letter in the secret word that day, but it is also in the correct position. If it turns yellow, it means that the letter guessed appears somewhere in the word, but not in that spot. Letters that turn gray aren’t in the word at all and can be omitted from future guesses.
@@ -310,9 +312,9 @@ Run `pytest tests/wordle_test.py` in the terminal to automatically test the prog
 
 ## Grading
 
-Verify the automated tests pass by running `pytest` in the terminal.
+Verify the automated tests pass by running `pytest` in the terminal. The automated tests will also be run whenever you commit your files and sync them to the repository. Commit often!
 
-The following table shows the point distribution for each part. Match the output provided by the project description.
+The following table shows the point distribution for each part.
 
 | **Allocated Points** | **Description** |
 | -------------------- | -------------------- |
@@ -356,4 +358,4 @@ Any edits or clarifications to the project will be announced in class and shown 
 
 ### Changelog
 
-- February 22, 2024: Updated directions for readability to accurately result test cases.
+- February 22, 2024: Updated directions for readability to accurately result test cases. Added information concerning testing.
