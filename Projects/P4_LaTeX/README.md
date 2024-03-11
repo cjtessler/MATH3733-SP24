@@ -11,7 +11,7 @@ The point are distributed as follows:
 
 ## Submission
 
-Each part should be done in a separate project titled `[lastname]-p[x]`, where `lastname` and `x` are specific to you and the part you are working on. For example, I would title Part 1 `tessler-p1`. Share your project with `cjtessler@seu.edu` using ShareLaTeX's sharing option by *Inviting named collabors*: [https://www.overleaf.com/learn/how-to/Sharing_a_project](https://www.overleaf.com/learn/how-to/Sharing_a_project)
+Each part should be done in a separate project titled `[lastname]-p[x]`, where `lastname` and `x` are specific to you and the part you are working on. For example, I would title Part 1 `tessler-p1`. Share your project with `cjtessler@seu.edu` using Overleaf's sharing option by *Inviting named collaborators*: [https://www.overleaf.com/learn/how-to/Sharing_a_project](https://www.overleaf.com/learn/how-to/Sharing_a_project)
 
 ## Part 1
 
@@ -108,7 +108,7 @@ The typed document must...
 - include the problem statement and student solution.
 - include a reference to the textbook in the bibliography.
 
-Also, take a picture of all pages of the handwritten assignment and include that in your ShareLaTeX project.
+Also, take a picture of all pages of the handwritten assignment and include that in your Overleaf project.
 
 Feel free to search the internet for different templates and ideas. E.g. [https://github.com/jdavis/latex-homework-template](https://github.com/jdavis/latex-homework-template)
 
