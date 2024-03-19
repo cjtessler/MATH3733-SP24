@@ -74,7 +74,7 @@ my_tesla.describe_battery()
 
 ### Exercise
 
-Add an attribute to the `Car` class called `wheels` with a default value of 4, which specifies the number of sheets on a car.
+Add an attribute to the `Car` class called `wheels` with a default value of 4, which specifies the number of wheels on a car.
 
 Write a `Motorcycle` class that inherits from `Car` with changes the values of `wheels` to 2 during its initialization.
 
